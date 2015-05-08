@@ -326,6 +326,7 @@ void ins_instrument(INS ins, VOID* v)
 		INS_InsertCall(ins, IPOINT_BEFORE, (AFUNPTR)ins_exit, IARG_INST_PTR, IARG_END);
 	}
 	fins_dis << "0x" << INS_Address(ins) << "\t" << INS_Disassemble(ins) << endl;
+	fout << INS_Disassemble(ins) << endl;
 	fins_dis_det << "0x" << INS_Address(ins) << "\t" << INS_Disassemble(ins) << endl;
 
 	pair<vector<ADDRINT>, vector<ADDRINT> > rw_reg;
